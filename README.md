@@ -3,7 +3,8 @@
 This is an approach to handle json string before you feed it to json.loads()
 
 It is seen that json implementation for python2 can simply only escape special characters and single quotes based on the type of the encoding that you use. But there is no any deliberate solution to escape double quotes when they are present within the value of a json string.
-#ILLUSTRATION:
+
+## ILLUSTRATION
 
 Consider a json string in unicode and if you try to load it using json module as:
 
@@ -33,6 +34,6 @@ Which is simply because your string is unicode and decode (in json) doesn't esca
 
 The approach followed here is an iterative one, It tries to fix the json by iteratively finding the unescaped double quotes and escaping it for you so that you do not get any error as mentioned above.
 
-#NOTE:
+## NOTE
 
 ### It is just a desperate solution to a problem, communities' support is highly appreciated
